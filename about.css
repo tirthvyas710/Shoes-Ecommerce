@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Encode Sans Semi Expanded", sans-serif;
+  color: white;
+}
+/* --------navigation bar -------- */
+
+nav {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 0.1px 10px 1.5px rgba(181, 181, 181, 0.2);
+    background-color: rgba(60, 59, 93, 0.8);
+    backdrop-filter: blur(80px);
+    position: sticky;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(10px);
+}
+#opt1:hover {
+    text-decoration: underline 3px rgba(231, 233, 237, 0.919);
+    text-underline-offset: 17px;
+    text-shadow: 1px 1px 30px #cccccc;
+    font-weight: 600;
+    transition: 0.3s ease-in;
+} 
+#navlogo{
+    height: 7vh;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    font-family: "Sedgwick Ave Display", "Permanent Marker", cursive;
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px rgb(19, 19, 19);
+}
+.logoname {
+    font-family: "Sedgwick Ave Display", "Permanent Marker", cursive;
+    font-size: 90%;
+}
+.logo img {
+    height: 50px;
+    margin: 5px;
+    box-shadow: #797878 1px 1px 20px;
+}
+.options {
+    height: inherit;
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: relative; */
+    font-family: "Encode Sans Semi Expanded", sans-serif;
+}
+.options ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    gap: 3em;
+    color: rgb(3, 3, 9);
+}
+.options ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.options ul li a:hover,
+.options ul li a.active {
+    text-decoration: underline 3px rgba(231, 233, 237, 0.919);
+    text-underline-offset: 17px;
+    text-shadow: 1px 1px 30px #cccccc;
+    font-weight: 600;
+    transition: 0.3s ease-in;
+    
+}
+
+.about{
+    
+    height: 100vh;
+    width: 100%;
+    background-image: url(./image/blurbackground.jpg);
+    background-attachment:fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+h2,p,h3{
+    margin-left: 2%;
+}
+p{
+    font-size: 16px;
+}
+h2,h3{
+    text-shadow: 0px 0px 20px white;
+}
+.abs{
+    margin-left: 2%;
+    height: 50px;
+    width: 200px;
+    background-color: transparent;
+    color: white;
+    font-size: x-large;
+    border: none;
+    border-radius: 10px ;
+    background-color: rgb(63, 63, 87);
+}
+.abs:hover{
+    background-color: rgb(80, 80, 113);
+    box-shadow: 0px 0px 20px rgb(222, 222, 222);
+    transition: all .5s;
+
+}

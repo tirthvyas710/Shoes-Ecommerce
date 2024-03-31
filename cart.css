@@ -1,0 +1,363 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior:smooth;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  backdrop-filter: blur(20px);
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(74, 72, 95);
+  backdrop-filter: blur(20px);
+}
+::-webkit-scrollbar-thumb {
+  background: #38586c;
+  border-radius: 15px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background:#38586c;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #ffffff;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: auto;
+  
+  /* background-image: linear-gradient(to right bottom,#000000 ,#000000f0); */
+  /* background-image: url(./img/nikeair1.jpg); */
+  
+}
+/* --------navigation bar -------- */
+nav {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 0.1px 10px 1.5px rgba(181, 181, 181, 0.2);
+  background-color: rgba(60, 59, 93, 0.8);
+  backdrop-filter: blur(80px);
+  position: sticky;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(10px);
+}
+#opt1:hover {
+  text-decoration: underline 3px rgba(231, 233, 237, 0.919);
+  text-underline-offset: 17px;
+  text-shadow: 1px 1px 30px #cccccc;
+  font-weight: 600;
+  transition: 0.3s ease-in;
+} 
+#navlogo{
+  height: 7vh;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  font-family: "Sedgwick Ave Display", "Permanent Marker", cursive;
+  box-shadow: 0px 0px 30px rgb(19, 19, 19);
+  border-radius: 10px;
+}
+.logoname {
+  font-family: "Sedgwick Ave Display", "Permanent Marker", cursive;
+  font-size: 90%;
+}
+.logo img {
+  height: 50px;
+  margin: 5px;
+  box-shadow: #797878 1px 1px 20px;
+}
+.options {
+  height: inherit;
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* position: relative; */
+  font-family: "Encode Sans Semi Expanded", sans-serif;
+}
+.options ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  gap: 3em;
+  color: rgb(3, 3, 9);
+}
+.options ul li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+.options ul li a:hover,
+.options ul li a.active {
+  text-decoration: underline 3px rgba(231, 233, 237, 0.919);
+  text-underline-offset: 17px;
+  text-shadow: 1px 1px 30px #c1c1c1;
+  font-weight: 600;
+  transition: 0.3s ease-in;
+}
+.active {
+  text-decoration: none;
+}
+
+
+.active:hover {
+  text-decoration: underline;
+}
+
+
+/* ---------------------cart-section --------------------------*/
+
+
+/* Cart-Section */
+#outtersection{
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* box-shadow: 2px 2px 10px black; */
+  padding: 2%;
+  gap: 30px;
+  background-image: url(./image/background.jpg);
+  background-size: cover;
+  
+}
+
+#cart{
+  /* background-color: rgb(179, 179, 179); */
+  height: 90vh ;  
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 3px 3px 20px rgb(0, 0, 0);
+  overflow: auto;
+  background-image: url(./image/blurbackground.jpg);
+  background-size: cover;
+
+}
+/* thead{ */
+  /* position: fixed; */
+  /* margin: 20px;
+  padding: 50px;
+  height: 100px;
+  width: 900px;
+  gap:  10px;
+} */
+
+  table{
+    /* margin-top: 17%; */
+    height: 90vh;
+    width: 85vw;
+    /* padding-top: 100%; */
+    /* gap: 20px; */
+    /* padding-top: 15%; */
+    position:static;
+    color: white;
+    font-family: "Encode Sans Semi Expanded", sans-serif;
+    
+  }
+  img{
+    height: 150px;
+    width: 150px;
+    border-radius: 30px;
+    box-shadow: 0 0 20px gray;
+  }
+  input{
+    border: none;
+    box-shadow: 0 0 10px black;
+    border-radius: 5px;
+    height: 25px;
+    border: none;
+    outline: none;
+    background-color:  blanchedalmond;
+    backdrop-filter: blur(15px);
+  }
+
+  #pbutton{
+    height: 100px;
+    width: 350px; 
+    border-radius: 10px;
+    background-color: transparent ;
+    backdrop-filter: blur(15px);
+    color: white;
+    font-weight: 900;
+    font-size: large;
+    font-family: sans-serif;
+    border: 2px dotted;
+    
+  }
+  #pbutton:hover{
+    transition:all 0.5s;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px white;
+
+  }
+
+  .minus{
+    height: 1.5;
+    width: 1.5rem; 
+    border-radius: 10px;
+    background-color: transparent;
+    backdrop-filter: blur(15px);
+    color: white;
+    font-weight: 900;
+    font-size: large;
+    font-family: sans-serif;
+    border: none;
+  }
+
+  .plus{
+    height: 1.5;
+    width: 1.5rem; 
+    border-radius: 10px;
+    background-color: transparent;
+    backdrop-filter: blur(15px);
+    color: white;
+    font-weight: 900;
+    font-size: large;
+    font-family: sans-serif;
+    border: none;
+  }
+
+  .totalamount{
+    text-align: center;
+    font-size: large;
+    position: absolute;
+    bottom: 5rem;
+    right: 10.2rem;
+    height: 2.5rem;
+    width: 10rem;
+    color: white;
+    /* background-color: white; */
+  }
+
+
+
+
+  /* -----------payment--------------- */
+
+  .payment {
+    width: 700px;
+    height: 625px;
+    background-color: white;
+    position: absolute;
+    margin: auto;
+    padding: 10px 50px;
+    display: none;
+    flex-direction: column;
+    -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    font-family:  "Encode Sans Semi Expanded", sans-serif;
+  }
+  
+  .payTitle {
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+  }
+
+  #cardinfo{
+   height: 200px;
+   display: flex;
+   flex-direction: column;
+  }
+  label {
+    font-size: 14px;
+    font-weight: 300;
+  }
+  
+  .payInput {
+    padding: 10px;
+    margin: 10px 0px;
+    border: none;
+    border-bottom: 1px solid gray;
+  }
+  
+  .payInput::placeholder {
+    color: rgb(163, 163, 163);
+  }
+  
+  .cardIcons {
+    display: flex;
+  }
+  
+  .cardIcon {
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+  }
+  
+  .cardInfo {
+    height: 275px;
+
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+  }
+  
+  .sm {
+    width: 30%;
+  }
+  
+  .payButton {
+    position: absolute;
+    height: 40px;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    bottom: -40;
+    left: 25%;
+    -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    background-color: #0067f891;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+  }
+  .payButton:hover{
+    position: absolute;
+    height: 40px;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    bottom: -40;
+    left: 25%;
+    -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    background-color: #0067f8;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 10px black;
+
+  }
+  
+  #close {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-color: rgb(250, 132, 132);
+    color: rgb(0, 0, 0);
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 100%;
+  }
+
+  

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sneaker Head</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="shortcut icon"
+      href="./favicon_io/favicon-16x16.png"
+      type="image/x-icon"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      data-purpose="Layout StyleSheet"
+      title="Web Awesome"
+      href="/css/app-wa-462d1fe84b879d730fe2180b0e0354e0.css?vsn=d"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-thin.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css"
+    />
+    <link rel="stylesheet" href="./cart.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img src="./imgnew/logo .png" id="navlogo" />
+      </div>
+      <div class="options">
+        <ul>
+          <li><a href="home.html">HOME</a></li>
+          <li><a href="shop.html">SHOP</a></li>
+          <!-- <li><a href="blog.html">BLOG</a></li> -->
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+          <li>
+            <a href="cart.html" class="active">
+              <i
+                class="fa-solid fa-cart-shopping fa-xl"
+                style="color: #ffffff"
+                id="opt1"
+              ></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Cart-Section -->
+
+    <section id="outtersection">
+      <section id="cart" class="section-p1">
+        <table cellspacing="10px" cellpadding="20px">
+          <thead>
+            <tr>
+              <th></th>
+              <th>IMAGES</th>
+
+              <th>PRODUCTS</th>
+              <th>PRICE</th>
+              <th>QUANTITY</th>
+              <th>TOTAL PRICE</th>
+            </tr>
+          </thead>
+
+          <tbody id="cartBody"></tbody>
+        </table>
+      </section>
+      <div class="totalamount"></div>
+      <button id="pbutton">CLICK HERE TO PAY</button>
+
+      <!-------------- payment------------------->
+
+      <div class="payment">
+        <h1 class="payTitle">Personal Information</h1>
+        <label>Name and Surname</label>
+        <input type="text" placeholder="John Doe" class="payInput" />
+        <br /><br />
+        <label>Phone Number</label>
+        <input type="text" placeholder="+1 234 5678" class="payInput" />
+        <br /><br />
+        <label>Address</label>
+        <input type="text" placeholder="Elton St 21 22-145" class="payInput" />
+        <h1 class="payTitle">Card Information</h1>
+        <div class="cardIcons">
+          <img src="./img/visa.png" width="40" alt="" class="cardIcon" />
+          <img src="./img/master.png" alt="" width="40" class="cardIcon" />
+        </div>
+        <div class="cardInfo">
+          <br />
+          <label>Card Number:- </label>
+          <input
+            type="password"
+            class="payInput"
+            placeholder="Card Number"
+            style="width: 400px"
+          /><br />
+          <div id="cardinfo">
+            <div>
+              <label>Month :-</label>
+              <input
+                type="number"
+                placeholder="mm"
+                class="payInput sm"
+                min="1"
+                max="12"
+              />
+            </div>
+            <div>
+              <label>Year:-</label>
+              <input
+                type="number"
+                placeholder="yyyy"
+                class="payInput sm"
+                min="1901"
+                max="2200"
+              />
+            </div>
+            <div>
+              <label>CVV:-</label>
+              <input
+                type="number"
+                placeholder="cvv"
+                class="payInput sm"
+                maxlength="999"
+              />
+            </div>
+          </div>
+        </div>
+
+        <button class="payButton">Checkout!</button>
+        <span id="close">X</span>
+      </div>
+    </section>
+
+    <script>
+      let btn = document.getElementById("pbutton");
+      let pay = document.querySelectorAll(".payment");
+      let pbtn = document.getElementById("pbutton");
+      let cls = document.getElementById("close");
+
+      pbtn.addEventListener("click", () => {
+        console.log("hello");
+        pay.forEach((element) => {
+          element.style.display = "block"; // Display each payment element
+        });
+      });
+
+      cls.addEventListener("click", () => {
+        pay.forEach((element) => {
+          element.style.display = "none"; // Hide each payment element
+        });
+      });
+
+      function removeItem(element) {
+        const row = element.closest("tr");
+        const rowIndex = row.rowIndex - 1;
+        cartItems.splice(rowIndex, 1);
+        row.remove();
+        totalAmount();
+        localStorage.setItem("cartItems", JSON.stringify(cartItems));
+      }
+
+      const storedCartItems = localStorage.getItem("cartItems");
+      const cartItems = storedCartItems ? JSON.parse(storedCartItems) : [];
+
+      const cartBody = document.getElementById("cartBody");
+
+      cartItems.forEach((item, index) => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+          <th><a href="#" onclick="removeItem(this)"><i class="fa-regular fa-circle-xmark"></i></a></th>
+          <th><img src="${item.image}" alt="${item.name}" /></th>
+          <th>${item.name}</th>
+          <th class="Uprice" id="price_${index}">${item.price}</th>
+          <th>
+            <div class="wrapper">
+              <button class="minus" onclick="decrement(${index})">-</button>
+              <span class="num" id="quantity_${index}" onchange="totalPrice(${index})">1</span>
+              <button class="plus" onclick="increment(${index})">+</button>
+            </div>
+          </th>
+          <th class="totalPrice" id="total_${index}">${item.price}</th>
+        `;
+        cartBody.appendChild(row);
+      });
+
+      function increment(index) {
+        const upriceElement = document.getElementById(`price_${index}`);
+        const tpriceElement = document.getElementById(`total_${index}`);
+        const numericPrice = parseFloat(
+          upriceElement.innerText.replace(/[^0-9.]/g, "")
+        );
+        const numSpan = document.getElementById(`quantity_${index}`);
+        let num = parseInt(numSpan.innerText);
+        num++;
+        const totalPrice = num * numericPrice;
+        tpriceElement.innerText = "₹ " + totalPrice.toFixed(2);
+        numSpan.innerText = num;
+        totalAmount();
+      }
+
+      function decrement(index) {
+        const upriceElement = document.getElementById(`price_${index}`);
+        const tpriceElement = document.getElementById(`total_${index}`);
+        const numericPrice = parseFloat(
+          upriceElement.innerText.replace(/[^0-9.]/g, "")
+        );
+        const totalprice = parseFloat(
+          tpriceElement.innerText.replace(/[^0-9.]/g, "")
+        );
+        const numSpan = document.getElementById(`quantity_${index}`);
+        let num = parseInt(numSpan.innerText);
+        if (num > 1) {
+          num--;
+          numSpan.innerText = num;
+          const finalamt = totalprice - numericPrice;
+          tpriceElement.innerText = "₹ " + finalamt.toFixed(2);
+          totalAmount();
+        }
+      }
+
+      function totalAmount() {
+        let totalPrice = 0;
+        cartItems.forEach((item, index) => {
+          const tpriceElement = document.getElementById(`total_${index}`);
+          totalPrice += parseFloat(
+            tpriceElement.innerText.replace(/[^0-9.]/g, "")
+          );
+        });
+        document.querySelector(".totalamount").innerText =
+          "Total Price : ₹ " + totalPrice.toFixed(2);
+      }
+      window.addEventListener("load", totalAmount);
+    </script>
+  </body>
+</html>
