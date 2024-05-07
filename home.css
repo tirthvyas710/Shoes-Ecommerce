@@ -8,6 +8,7 @@
 body {
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 ::-webkit-scrollbar {
   width: 5px;
@@ -24,6 +25,7 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background:#38586c;
 }
+
 
 /* --------navigation bar -------- */
 nav {
@@ -103,9 +105,10 @@ nav {
 .logform {
   margin: 0%;
   padding: 0%;
-  height: 100vh;
+  height: 90vh;
   width: 100%;
   display: inline;
+  
 }
 h1 {
   font-weight: bold;
@@ -322,7 +325,7 @@ input {
   justify-content: space-evenly;
 }
 /* -----------features------------- */
-.features {
+/* .features {
   margin: 0;
   padding: 0;
   height: 400px;
@@ -362,15 +365,15 @@ input {
 }
 
 /* --------------------footer--------------------  */
-.section-p1 {
+/* .section-p1 {
   margin: 5%;
   height: 50%;
   width: 95%;
   display: flex;
   gap: 150px;
   /* background-image: url(./image/cool-shoes-wallpaper.jpg);     */
-  color: rgb(0, 0, 0);
-}
-.c1 {
-  font-family: "Encode Sans Semi Expanded", sans-serif;
-}
+  /* color: rgb(0, 0, 0);
+} */
+/* .c1 { */
+  /* font-family: "Encode Sans Semi Expanded", sans-serif;
+} */ 

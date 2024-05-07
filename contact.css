@@ -31,7 +31,7 @@ nav {
     font-weight: 600;
     transition: 0.3s ease-in;
   } 
-  #navlogo{
+  img{
     height: 80%;
     width: 100%;
     display: flex;
@@ -40,7 +40,6 @@ nav {
     font-weight: 800;
     font-family: "Sedgwick Ave Display", "Permanent Marker", cursive;
     border-radius: 10px;
-    box-shadow: 0px 0px 30px rgb(19, 19, 19);
   }
   .logoname {
     font-family: "Sedgwick Ave Display", "Permanent Marker", cursive;
@@ -75,8 +74,7 @@ nav {
   }
   .options ul li a:hover,
   .options ul li a.active {
-    
-    text-decoration: underline 3px rgba(255, 255, 255, 0.919);
+    text-decoration: underline 3px rgba(231, 233, 237, 0.919);
     text-underline-offset: 17px;
     text-shadow: 1px 1px 30px #cccccc;
     font-weight: 600;

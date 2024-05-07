@@ -60,12 +60,13 @@
       <div class="options">
         <ul>
           <li><a href="home.html">HOME</a></li>
+          <li><a href="info.html">INFO</a></li>
           <li><a href="shop.html">SHOP</a></li>
           <!-- <li><a href="blog.html">BLOG</a></li> -->
           <li><a href="about.html">ABOUT</a></li>
           <li><a href="contact.html">CONTACT</a></li>
           <li>
-            <a href="cart.html" class="active">
+            <a href="car.html" class="active">
               <i
                 class="fa-solid fa-cart-shopping fa-xl"
                 style="color: #ffffff"
@@ -98,11 +99,14 @@
         </table>
       </section>
       <div class="totalamount"></div>
-      <button id="pbutton">CLICK HERE TO PAY</button>
+      <stripe-buy-button  buy-button-id="buy_btn_1P3edESAKJRmVMF0nmErNEfS" publishable-key="pk_test_51P3doMSAKJRmVMF0w7AHZXQ6gxQ42OG97D2WI1C7PHQexQWUlXtcDUqg0Iz2rKvnB4uceYDWskrs98jPnKg2oaL700IuXDYo4t">
+
+      </stripe-buy-button>
+      <button id="pbutton" style="display: none;">CLICK HERE TO PAY</button>
 
       <!-------------- payment------------------->
 
-      <div class="payment">
+      <div class="payment" style="display: none;">
         <h1 class="payTitle">Personal Information</h1>
         <label>Name and Surname</label>
         <input type="text" placeholder="John Doe" class="payInput" />
@@ -164,6 +168,7 @@
       </div>
     </section>
 
+    <script async  src="https://js.stripe.com/v3/buy-button.js"></script>
     <script>
       let btn = document.getElementById("pbutton");
       let pay = document.querySelectorAll(".payment");

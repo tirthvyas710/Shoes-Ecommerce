@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  backdrop-filter: blur(20px);
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(74, 72, 95);
+  backdrop-filter: blur(20px);
+}
+::-webkit-scrollbar-thumb {
+  background: #38586c;
+  border-radius: 15px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background:#38586c;
+}
+
+
+/* --------navigation bar -------- */
+nav {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 0.1px 10px 1.5px rgba(181, 181, 181, 0.2);
+  background-color: rgba(60, 59, 93, 0.8);
+  backdrop-filter: blur(80px);
+  position: sticky;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(10px);
+}
+#opt1:hover {
+  text-decoration: underline 3px rgba(231, 233, 237, 0.919);
+  text-underline-offset: 17px;
+  text-shadow: 1px 1px 30px #cccccc;
+  font-weight: 600;
+  transition: 0.3s ease-in;
+}
+#navlogo {
+  height: 7vh;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  font-family: "Sedgwick Ave Display", "Permanent Marker", cursive;
+  border-radius: 10px;
+  box-shadow: 0px 0px 30px rgb(19, 19, 19);
+}
+.logoname {
+  font-family: "Sedgwick Ave Display", "Permanent Marker", cursive;
+  font-size: 90%;
+}
+.logo img {
+  height: 50px;
+  margin: 5px;
+  box-shadow: #797878 1px 1px 20px;
+}
+.options {
+  height: inherit;
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* position: relative; */
+  font-family: "Encode Sans Semi Expanded", sans-serif;
+}
+.options ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  gap: 3em;
+  color: rgb(3, 3, 9);
+}
+.options ul li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+.options ul li a:hover,
+.options ul li a.active {
+  text-decoration: underline 3px rgba(231, 233, 237, 0.919);
+  text-underline-offset: 17px;
+  text-shadow: 1px 1px 30px #cccccc;
+  font-weight: 600;
+  transition: 0.3s ease-in;
+}
+
+
+.product-card {
+  
+  width: 1550px;
+  border: 1px solid #ccc;
+  padding: 16px;
+  text-align: center;
+  display: flex;
+  /* flex-direction: column; */
+}
+
+.product-image {
+
+  width: 99%;
+  height: auto;
+}
+#prodetails{
+  padding-left: 15%;
+  padding-right: 15%;
+  width: 80%;
+
+}
+
+.product-name {
+  margin: 16px 0;
+}
+
+.product-price {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.product-description {
+  margin-bottom: 32px;
+}
+
+.add-to-cart-button,
+.wishlist-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.product-size {
+  margin-bottom: 16px;
+}
+
+.size-select {
+  margin-left: 8px;
+}
+
+.free-shipping,
+.returns,
+.secure-checkout {
+  margin-bottom: 8px;
+}

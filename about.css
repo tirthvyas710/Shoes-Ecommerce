@@ -11,6 +11,21 @@ body {
   font-family: "Encode Sans Semi Expanded", sans-serif;
   color: white;
 }
+::-webkit-scrollbar {
+    width: 5px;
+    backdrop-filter: blur(20px);
+  }
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(74, 72, 95);
+    backdrop-filter: blur(20px);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #38586c;
+    border-radius: 15px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background:#38586c;
+  }
 /* --------navigation bar -------- */
 
 nav {
@@ -27,35 +42,34 @@ nav {
     top: 0;
     left: 0;
     backdrop-filter: blur(10px);
-}
-#opt1:hover {
+  }
+  #opt1:hover {
     text-decoration: underline 3px rgba(231, 233, 237, 0.919);
     text-underline-offset: 17px;
     text-shadow: 1px 1px 30px #cccccc;
     font-weight: 600;
     transition: 0.3s ease-in;
-} 
-#navlogo{
-    height: 7vh;
-    width: 100px;
+  } 
+  img{
+    height: 80%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: 800;
     font-family: "Sedgwick Ave Display", "Permanent Marker", cursive;
     border-radius: 10px;
-    box-shadow: 0px 0px 30px rgb(19, 19, 19);
-}
-.logoname {
+  }
+  .logoname {
     font-family: "Sedgwick Ave Display", "Permanent Marker", cursive;
     font-size: 90%;
-}
-.logo img {
+  }
+  .logo img {
     height: 50px;
     margin: 5px;
     box-shadow: #797878 1px 1px 20px;
-}
-.options {
+  }
+  .options {
     height: inherit;
     width: 45%;
     display: flex;
@@ -63,8 +77,8 @@ nav {
     justify-content: center;
     /* position: relative; */
     font-family: "Encode Sans Semi Expanded", sans-serif;
-}
-.options ul {
+  }
+  .options ul {
     list-style: none;
     display: flex;
     justify-content: space-between;
@@ -72,32 +86,36 @@ nav {
     font-weight: 600;
     gap: 3em;
     color: rgb(3, 3, 9);
-}
-.options ul li a {
+  }
+  .options ul li a {
     color: rgb(255, 255, 255);
     text-decoration: none;
-}
-.options ul li a:hover,
-.options ul li a.active {
+  }
+  .options ul li a:hover,
+  .options ul li a.active {
     text-decoration: underline 3px rgba(231, 233, 237, 0.919);
     text-underline-offset: 17px;
     text-shadow: 1px 1px 30px #cccccc;
     font-weight: 600;
     transition: 0.3s ease-in;
-    
-}
-
+  }
+  
 .about{
     
-    height: 100vh;
+    height: 100%;
     width: 100%;
-    background-image: url(./image/blurbackground.jpg);
+    background-image: url(./image/cool-blur.jpg);
     background-attachment:fixed;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: repeat-y;
     
+    
+    
+    
+}
+h1{
+    margin: 30px;
 }
 h2,p,h3{
     margin-left: 2%;
@@ -105,15 +123,15 @@ h2,p,h3{
 p{
     font-size: 16px;
 }
-h2,h3{
+/* h2,h3{
     text-shadow: 0px 0px 20px white;
-}
+} */
 .abs{
     margin-left: 2%;
     height: 50px;
     width: 200px;
     background-color: transparent;
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: x-large;
     border: none;
     border-radius: 10px ;
